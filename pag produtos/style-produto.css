@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+/* LOGO */
+.logo img{
+    width: 100px;
+    display: block;
+}
+
+/* MENU */
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* LINHA EMBAIXO DO LINK */
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #d4a24c;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #d4a24c;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* BOTÕES */
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* BOTÃO ENTRAR */
+.btn-login{
+    background-color: transparent;
+    border: 1px solid #d4a24c;
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-login:hover{
+    background-color: #d4a24c;
+    color: black;
+}
+
+/* BOTÃO CRIAR CONTA */
+.btn-cadastro{
+    background-color: #d4a24c;
+    border: none;
+    color: black;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-cadastro:hover{
+    transform: scale(1.05);
+}
+
+/* HERO PRODUTOS */
+.hero-produtos{
+    width: 100%;
+    height: 280px;
+
+    background-image: url('image-crop-200000429-1.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+}
+
+.hero-texto{
+    position: relative;
+    z-index: 2;
+}
+
+.hero-texto h1{
+    color: white;
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.hero-texto p{
+    color: #cfcfcf;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* FILTROS */
+.filtros{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.filtros button{
+    background: transparent;
+    border: 1px solid #444;
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.filtros button:hover{
+    border-color: #d4a24c;
+    color: #d4a24c;
+}
+
+/* PRODUTOS */
+.produtos{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    padding: 0 40px 60px;
+}
+
+/* CARD */
+.card{
+    background: #161616;
+
+    border: 1px solid #222;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    border-color: #d4a24c;
+}
+
+.card img{
+    width: 100%;
+    height: 180px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.card h3{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card p{
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* FOOTER CARD */
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-footer span{
+    color: #d4a24c;
+    font-weight: 600;
+}
+
+.card-footer button{
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #d4a24c;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card-footer button:hover{
+    transform: scale(1.1);
+}
+
+
+/* RESPONSIVIDADE */
+@media(max-width: 900px){
+
+    header{
+        height: auto;
+        padding: 20px;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo{
+        position: static;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .buttons{
+        position: static;
+    }
+}
+
+/* CELULAR */
+@media(max-width: 500px){
+
+    nav ul{
+        gap: 15px;
+    }
+
+    nav ul li a{
+        font-size: 13px;
+    }
+
+    .buttons{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-login,
+    .btn-cadastro{
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
