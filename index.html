@@ -28,14 +28,38 @@
             <img src="Logotipo_barbearia_profissional_cinza_e_vermelho-removebg-preview.png" class="logo" alt="Logo">
 
             <!-- TÍTULO -->
-            <h1>Bem vindo de volta</h1>
+            <h1>Crie seu Login</h1>
 
             <p>
-                Faça login para acessar e gerenciar seus agendamentos
+               Sua barbearia, agora de cara nova. Crie sua conta e venha nos conhecer!
             </p>
 
             <!-- FORM -->
             <form>
+
+                <!-- USUÁRIO -->
+                <div
+                class="input-box"
+                >
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                    type="text"
+                    placeholder="Usuário"
+                    required
+                    >
+                </div>
+
+                <!-- TELEFONE -->
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                    type="tel"
+                    placeholder="Telefone"
+                    required
+                    >
+                </div>
 
                 <!-- EMAIL -->
                 <div class="input-box">
@@ -55,6 +79,21 @@
                     <input
                     type="password"
                     placeholder="Senha"
+                    id="senha"
+                    required
+                    >
+
+                    <i class="fa-regular fa-eye-slash"></i>
+                </div>
+
+                <!-- CONFIRMAR SENHA -->
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                    type="password"
+                    placeholder="Confirmar Senha"
+                    id="confirmarSenha"
                     required
                     >
 
@@ -66,18 +105,15 @@
 
                     <label>
                         <input type="checkbox">
-                        Lembrar de mim
+                        Eu concordo com os termos de uso e a política de privacidade
                     </label>
 
-                    <a href="#">
-                        Esqueceu sua senha?
-                    </a>
 
                 </div>
 
                 <!-- BOTÃO -->
                 <button type="submit">
-                    ENTRAR
+                    CRIAR CONTA
                 </button>
 
             </form>
@@ -86,11 +122,11 @@
             <div class="register">
 
                 <span>
-                    Não tem uma conta?
+                    Já tem uma conta?
                 </span>
 
                 <a href="#">
-                    Criar conta
+                    Fazer login
                 </a>
 
             </div>
