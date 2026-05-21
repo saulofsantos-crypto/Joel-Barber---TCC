@@ -6,10 +6,218 @@
     <link rel="stylesheet" href="style-espera.css">
     <title>Joel Barber</title>
 </head>
-
-<header class="menu"> </header> 
 <body>
+        <header>
+
+        <div class="topo">
+            <h1 class="logo">
+                <img src="joelimg.png" alt="imagem de perfil" id="foto">
+            </h1>
+        </div>
+
+        <div class="logo"><img src="logo.png" alt=""></div>
+
+        <nav>
+                    <ul>
+        
+                        <li><a href="#">Início</a></li>
     
+                        <li><a href="#">Serviços</a></li>
+
+                        <li><a href="#">Agendamentos</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Fila de Espera</a></li>
+        </ul>
+    </nav>
+
+    <div class="buttons">
+        <button class="btn-login">Entrar</button>
+        <button class="btn-cadastro">Criar Conta</button>
+    </div>
+
+</header>
+
+<!-- MAIN -->
+<main class="fila-container">
+
+    <!-- ESQUERDA -->
+    <section class="fila-left">
+
+        <!-- CARD PRINCIPAL -->
+        <div class="card-fila">
+
+            <div class="infos-top">
+
+                <div class="info-box">
+                    <h3>Você está na fila!</h3>
+                    <p>Fique tranquilo, vamos te avisar quando estiver quase na sua vez.</p>
+                </div>
+
+                <div class="info-box center">
+                    <span>Horário e Dia</span>
+                    <h2>20/05 às 17:30</h2>
+                </div>
+
+                <div class="info-box center">
+                    <span>Previsão de Atendimento</span>
+                    <h2>Aprx. 1h e 7hs</h2>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- POSIÇÃO -->
+            <div class="posicao">
+
+                <h3>Sua posição na fila</h3>
+
+                <div class="linha-fila">
+
+                    <div class="pessoa ativo">
+                        <div class="circulo">✔</div>
+                        <span>1º</span>
+                        <p>J.J James</p>
+                    </div>
+
+                    <div class="barra"></div>
+
+                    <div class="pessoa ativo">
+                        <div class="circulo">✔</div>
+                        <span>2º</span>
+                        <p>Denilson Show</p>
+                    </div>
+
+                    <div class="barra"></div>
+
+                    <div class="pessoa atual">
+                        <div class="circulo">✔</div>
+                        <span>3º</span>
+                        <p>Você</p>
+                    </div>
+
+                    <div class="barra"></div>
+
+                    <div class="pessoa">
+                        <div class="circulo"></div>
+                        <span>4º</span>
+                        <p>Filipe Cipriano</p>
+                    </div>
+
+                    <div class="barra"></div>
+
+                    <div class="pessoa">
+                        <div class="circulo"></div>
+                        <span>5º</span>
+                        <p>Neguinho do Celta</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AVISO -->
+        <div class="alerta">
+            <div>
+                <h3>Avisaremos quando estiver quase na sua vez!</h3>
+                <p>Você receberá uma notificação aqui e por push</p>
+            </div>
+
+            <button class="btn-sair">Sair da fila</button>
+        </div>
+
+        <!-- SERVIÇOS -->
+        <div class="servicos-box">
+
+            <h3>Aproveite e conheça nossos serviços</h3>
+
+            <div class="cards-servicos">
+
+                <div class="card-servico">
+                    <img src="corte.jpg" alt="">
+                    <div class="servico-info">
+                        <h4>Corte de cabelo</h4>
+                        <span>R$ 45,00</span>
+                        <p>40m</p>
+                    </div>
+                </div>
+
+                <div class="card-servico">
+                    <img src="barba.jpg" alt="">
+                    <div class="servico-info">
+                        <h4>Barba</h4>
+                        <span>R$ 30,00</span>
+                        <p>30m</p>
+                    </div>
+                </div>
+
+                <div class="card-servico">
+                    <img src="cortebarba.jpg" alt="">
+                    <div class="servico-info">
+                        <h4>Corte + Barba</h4>
+                        <span>R$ 65,00</span>
+                        <p>60m</p>
+                    </div>
+                </div>
+
+                <div class="card-servico">
+                    <img src="sobrancelha.jpg" alt="">
+                    <div class="servico-info">
+                        <h4>Sombracelha</h4>
+                        <span>R$ 15,00</span>
+                        <p>10m</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DIREITA -->
+    <aside class="sidebar">
+
+        <!-- SOBRE -->
+        <div class="sidebar-card">
+            <h3>Sobre a barbearia</h3>
+
+            <div class="barber-info">
+                <h4>Joel Barber</h4>
+                <span> 4.9</span>
+                <p>Centro comercial de camaçari</p>
+                <p>Centro, Camaçari, BA</p>
+            </div>
+        </div>
+
+        <!-- SERVIÇOS -->
+        <div class="sidebar-card">
+
+            <h3>Serviços mais procurados</h3>
+
+            <ul class="lista-servicos">
+                <li><span>Corte de cabelo</span> <b>R$ 30,00</b></li>
+                <li><span>Barba</span> <b>R$ 20,00</b></li>
+                <li><span>Corte + Barba</span> <b>R$ 50,00</b></li>
+                <li><span>Barba Premium</span> <b>R$ 30,00</b></li>
+                <li><span>Sobrancelha</span> <b>R$ 10,00</b></li>
+            </ul>
+
+            <button class="btn-servicos">
+                Ver todos os serviços
+            </button>
+
+        </div>
+
+        <button class="btn-avaliar">Avaliar a barbearia</button>
+
+    </aside>
+
+</main>
+
     <script src="script-espera.js"> </script>
+    
 </body>
 </html>
