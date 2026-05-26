@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel Barber</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="Logotipo_barbearia_profissional_cinza_e_vermelho-removebg-preview.png" alt="Logo Joel Barber" id="foto">
+        </div>
+
+        <!-- MENU -->
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+
+                <li><a href="#servicos">
+                    Serviços
+                </a></li>
+
+                <li><a href="#agendamentos">
+                    Agendamentos
+                </a></li>
+
+                <li><a href="#produtos">
+                    Produtos
+                </a></li>
+
+                <li><a href="#fila">
+                    Fila de Espera
+                </a></li>
+            </ul>
+        </nav>
+
+        <!-- BOTÕES -->
+        <div class="buttons">
+
+            <button class="btn-login" onclick="login()">
+                Entrar
+            </button>
+
+            <button class="btn-cadastro" onclick="criarConta()">
+                Criar Conta
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Sua melhor versão
+                <span>começa aqui</span>
+            </h1>
+
+            <p>
+                Agende seu horário, escolha seu barbeiro favorito
+                e aproveite uma experiência única.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn-agendar" onclick="agendarAgora()">
+                    Agendar Agora
+                </button>
+
+                <button class="btn-servicos" onclick="verServicos()">
+                    Ver Serviços
+                </button>
+
+            </div>
+
+            <div class="hero-features">
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <img src="icons8-relógio-50.png" alt="Agendamento">
+</span>
+                    <div class="feature-text">
+                        <strong>Agendamento</strong>
+                        <p>Rápido e Prático</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <img src="icons8-administrador-masculino-26.png" alt="Profissionais">
+</span>
+                    <div class="feature-text">
+                        <strong>Profissionais</strong>
+                        <p>Especializados</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">
+                        <img src="icons8-sacola-de-compras-26.png" alt="Produtos Premium">
+</span>
+                    <div class="feature-text">
+                        <strong>Produtos Premium</strong>
+                        <p>Alta Qualidade</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                  <span class="feature-icon">
+                        <img src="icons8-loja-26.png" alt="Ambiente">
+</span>
+                    <div class="feature-text">
+                        <strong>Ambiente</strong>
+                        <p>Moderado</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="agendamento" id="agendamentos">
+
+        <div class="agendamento-box">
+            <h2>Agendamento Rápido</h2>
+
+            <div class="agendamento-field">
+                <div class="field-head">
+                    <span class="field-icon"><img src="icons8-tesoura-26.png" alt="Serviço"></span>
+                    <span class="field-label">Serviço</span>
+                </div>
+                <select>
+                    <option>Selecione um serviço</option>
+                    <option>Corte</option>
+                    <option>Barba</option>
+                    <option>Acabamento</option>
+                </select>
+            </div>
+
+            <div class="agendamento-field">
+                <div class="field-head">
+                    <span class="field-icon"><img src="icons8-administrador-masculino-26.png" alt="Barbeiro"></span>
+                    <span class="field-label">Barbeiro</span>
+                </div>
+                <select>
+                    <option>Escolha um profissional</option>
+                    <option>Joel</option>
+                    <option>Carlos</option>
+                </select>
+            </div>
+
+            <div class="agendamento-field">
+                <div class="field-head">
+                    <span class="field-icon"><img src="icons8-agenda-50.png" alt="Data"></span>
+                    <span class="field-label">Data</span>
+                </div>
+                <input type="date">
+            </div>
+
+            <div class="agendamento-field">
+                <div class="field-head">
+                    <span class="field-icon"><img src="icons8-relógio-50.png" alt="Horários"></span>
+                    <span class="field-label">Horários</span>
+                </div>
+                <input type="time">
+            </div>
+
+            <button onclick="verHorarios()">
+                Ver Horários
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CARDS -->
+    <section class="cards">
+
+        <div class="card" id="servicos">
+
+            <img src="1-corte-cabelo-masculino-2019-600x400.jpg" alt="Serviços">
+
+            <h3>Serviços</h3>
+
+            <p>
+                Cortes, barbas, acabamentos e muito mais.
+            </p>
+
+            <button onclick="abrirServicos()">
+                Ver Serviços
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="curso-de-barbeiro-em-Blumenau.jpg" alt="Barbeiros">
+
+            <h3>Barbeiros</h3>
+
+            <p>
+                Profissionais qualificados prontos para atender.
+            </p>
+
+            <button onclick="conhecerBarbeiros()">
+                Conhecer Barbeiros
+            </button>
+
+        </div>
+
+        <div class="card" id="produtos">
+
+            <img src="images.jpg" alt="Produtos">
+
+            <h3>Produtos</h3>
+
+            <p>
+                Linha premium para seu estilo.
+            </p>
+
+            <button onclick="verProdutos()">
+                Ver Produtos
+            </button>
+
+        </div>
+
+        <div class="card" id="fila">
+
+            <img src="banner-fila-de-espera-em-barberia.png" alt="Fila de Espera">
+
+            <h3>Fila de Espera</h3>
+
+            <p>
+                Veja os horários disponíveis em tempo real.
+            </p>
+
+            <button onclick="irFilaEspera()">
+                Ir Para Fila
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>
