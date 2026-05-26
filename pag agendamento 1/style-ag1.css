@@ -1,10 +1,241 @@
-/* Fundo preto da página inteira */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* RESET */
 *{
-    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: transparent; */
 }
 
-/* Fundo mais claro para o conteudo principal */
-main {
+/* BODY */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+}
+
+/* ------------------- HEADER -------------------------- */
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+
     display: flex;
-    background-color: #0F1011;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    border-bottom: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+}
+
+/* LOGO */
+.logo img{
+    width: 90px;
+    display: block;
+}
+
+/* MENU */
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* LINHA EMBAIXO DO LINK */
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #d4a24c;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #d4a24c;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* BOTÕES */
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* BOTÃO ENTRAR */
+.btn-login{
+    background-color: transparent;
+    border: 1px solid #d4a24c;
+    color: white;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-login:hover{
+    background-color: #d4a24c;
+    color: black;
+}
+
+/* BOTÃO CRIAR CONTA */
+.btn-cadastro{
+    background-color: #d4a24c;
+    border: none;
+    color: black;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-cadastro:hover{
+    transform: scale(1.05);
+}
+
+/* ------------------------ BODY/CORPO DA PAGINA -------------------------------------- */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+    padding-top: 90px; 
+}
+
+/* Container que segura o card da img barbeariano centro da página */
+.container-pagina-lateral {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh; /* Faz ocupar a tela toda */
+    padding: 20px;
+
+}
+
+/* O Card em si */
+.card-barbearia {
+    position: relative; /* Regra de ouro para podermos jogar o texto por cima */
+    width: 400px;       /* Largura aproximada do card da foto */
+    border-radius: 15px;
+    overflow: hidden;   /* Faz a imagem respeitar as bordas arredondadas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+   
+
+}
+
+/* A IMAGEM DE FUNDO (Ela dita as regras do tamanho agora) */
+.card-barbearia img, 
+.card-barbearia .img-fundo {
+    /* REMOVEMOS: position: absolute (para ela voltar a ocupar espaço real) */
+    display: block;
+    width: 100%;
+    height: auto; /* Faz a altura se ajustar proporcionalmente sem sobras */
+}
+
+/* Bloco de texto flutuando sobre a imagem */
+.conteudo-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Centraliza todo o texto e botão verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    
+    padding: 40px 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Título */
+.conteudo-card h1 {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 42px;         /* Fonte grande igual à foto */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* A linha divisória dourada */
+.divisor {
+    width: 60%;
+    border: none;
+    height: 1px;
+    background-color: #c09455; /* Cor dourada */
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+/* Parágrafo explicativo */
+.conteudo-card p {
+    color: #a0a0a0; /* Cinza claro idêntico à imagem */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Botão Começar Agendamento */
+.btn-agendamento {
+    background-color: #dca35a; /* Tom de dourado/caramelo fosco */
+    color: #000000;    
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;                 /* Espaço entre o emoji de calendário e o texto */
+    transition: background-color 0.3s;
+}
+
+.btn-agendamento:hover {
+    background-color: #c09455; /* Escurece de leve ao passar o mouse */
 }
