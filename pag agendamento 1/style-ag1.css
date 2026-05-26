@@ -1,0 +1,10 @@
+/* Fundo preto da página inteira */
+*{
+    background-color: black;
+}
+
+/* Fundo mais claro para o conteudo principal */
+main {
+    display: flex;
+    background-color: #0F1011;
+}
